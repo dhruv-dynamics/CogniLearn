@@ -1,0 +1,14 @@
+node_modules/
+.env
+.env.*
+!.env.example
+uploads/images/*
+!uploads/images/.gitkeep
+uploads/notes/*
+!uploads/notes/.gitkeep
+uploads/thumbnails/*
+!uploads/thumbnails/.gitkeep
+uploads/videos/*
+!uploads/videos/.gitkeep
+logs/
+*.log

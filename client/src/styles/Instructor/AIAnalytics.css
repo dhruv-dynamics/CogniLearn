@@ -1,0 +1,126 @@
+/* ============================================================
+   AI ANALYTICS STYLESHEET
+   ============================================================ */
+
+.ai-analytics-wrapper {
+  background: var(--bg-deep);
+  min-height: 100vh;
+  padding: 20px 30px 60px;
+  color: var(--text-main);
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.analytics-header {
+  margin-bottom: 28px;
+}
+
+.analytics-header h1 {
+  font-size: 2.2rem;
+  font-weight: 800;
+  background: var(--ai-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 6px;
+}
+
+.analytics-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+  gap: 24px;
+}
+
+.glass-card {
+  background: rgba(15, 23, 42, 0.7);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius-md);
+  padding: 24px;
+}
+
+.ai-perf {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.ai-perf h3 {
+  font-size: 1.25rem;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+.gauge-container {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  background: conic-gradient(#a855f7 var(--target), rgba(255, 255, 255, 0.08) 0);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin-bottom: 18px;
+}
+
+.gauge-container::after {
+  content: "";
+  position: absolute;
+  width: 125px;
+  height: 125px;
+  border-radius: 50%;
+  background: #0f172a;
+}
+
+.gauge-value {
+  position: relative;
+  z-index: 2;
+  font-size: 2rem;
+  font-weight: 800;
+  color: #c084fc;
+}
+
+.doubts-list h3 {
+  font-size: 1.25rem;
+  color: #fff;
+  margin-bottom: 18px;
+}
+
+.doubt-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 14px;
+  background: rgba(30, 41, 59, 0.5);
+  border-radius: var(--radius-sm);
+  margin-bottom: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.doubt-item .topic {
+  font-weight: 600;
+  color: #e2e8f0;
+}
+
+.doubt-item .count {
+  font-size: 0.85rem;
+  color: #94a3b8;
+}
+
+.doubt-item .trend {
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 0.85rem;
+}
+
+.doubt-item .trend.up {
+  color: #f87171;
+  background: rgba(239, 68, 68, 0.15);
+}
+
+.doubt-item .trend.down {
+  color: #34d399;
+  background: rgba(16, 185, 129, 0.15);
+}
+

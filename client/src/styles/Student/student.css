@@ -1,0 +1,136 @@
+/* ========== GLOBAL STUDENT THEME ========== */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f9fafb;
+  margin: 0;
+  padding: 0;
+  color: #1f2937;
+}
+
+/* ========== TOP NAV / HEADER ========== */
+.student-topbar {
+  height: 60px;
+  background: #111827;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.student-topbar h2 {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+/* ========== LAYOUT WRAPPER ========== */
+.student-layout {
+  display: flex;
+  height: calc(100vh - 60px);
+}
+
+/* ========== SIDEBAR ========== */
+.student-sidebar {
+  width: 300px;
+  background: #ffffff;
+  border-right: 1px solid #e5e7eb;
+  overflow-y: auto;
+  padding: 15px;
+}
+
+.student-sidebar h4 {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #374151;
+  text-transform: uppercase;
+}
+
+/* ========== LESSON ITEMS ========== */
+.lesson-item {
+  padding: 10px 12px;
+  border-radius: 8px;
+  margin-bottom: 6px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.lesson-item:hover {
+  background: #eef2ff;
+}
+
+.lesson-item.active {
+  background: #4f46e5;
+  color: white;
+  font-weight: 500;
+}
+
+.lesson-item.locked {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* ========== MAIN CONTENT AREA ========== */
+.student-content {
+  flex: 1;
+  padding: 25px;
+  background: #ffffff;
+  overflow-y: auto;
+}
+
+/* ========== VIDEO PLAYER ========== */
+.student-content video {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* ========== TEXT LESSON CONTENT ========== */
+.text-lesson {
+  font-size: 16px;
+  line-height: 1.7;
+  color: #374151;
+}
+
+.text-lesson h1,
+.text-lesson h2,
+.text-lesson h3 {
+  margin-top: 20px;
+}
+
+/* ========== PROGRESS BADGE ========== */
+.progress-badge {
+  background: #1f2937;
+  color: #fff;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 14px;
+}
+
+/* ========== SCROLLBAR STYLE ========== */
+.student-sidebar::-webkit-scrollbar,
+.student-content::-webkit-scrollbar {
+  width: 6px;
+}
+
+.student-sidebar::-webkit-scrollbar-thumb,
+.student-content::-webkit-scrollbar-thumb {
+  background: #d1d5db;
+  border-radius: 10px;
+}
+
+/* ========== MOBILE RESPONSIVE ========== */
+@media (max-width: 768px) {
+  .student-layout {
+    flex-direction: column;
+  }
+
+  .student-sidebar {
+    width: 100%;
+    height: 200px;
+    border-right: none;
+    border-bottom: 1px solid #e5e7eb;
+  }
+}

@@ -1,0 +1,38 @@
+/* StudentNavbar.css */
+
+.student-navbar {
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  padding: 0 40px !important;
+  background: #1a1d23 !important; /* Pure black/dark blue as per screenshot */
+  height: 70px !important;
+  width: 100vw !important; /* Viewport width taaki edge-to-edge rahe */
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  z-index: 9999 !important;
+  box-sizing: border-box !important;
+}
+
+.student-navbar-right {
+  display: flex !important;
+  gap: 20px !important;
+}
+
+/* Links ka color forcing */
+.student-nav-link {
+  color: #adb5bd !important;
+  text-decoration: none !important;
+  font-size: 0.9rem !important;
+}
+
+.student-nav-link:hover {
+  color: #ffffff !important;
+}
+
+/* AI Tutor special glow */
+.mentor-ai-link {
+  color: #a855f7 !important;
+  font-weight: bold !important;
+}

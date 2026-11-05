@@ -1,0 +1,213 @@
+/* ============================================================
+   CERTIFICATES STYLESHEET (CogniLearn Pro)
+   ============================================================ */
+
+.certificates-page-wrapper {
+  background: var(--bg-deep);
+  min-height: 100vh;
+  padding: 120px 30px 60px;
+  color: var(--text-main);
+  display: flex;
+  justify-content: center;
+}
+
+.certificates-container {
+  max-width: 1100px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* Glass Card Helper */
+.cert-card {
+  background: rgba(15, 23, 42, 0.75);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius-md);
+  padding: 28px 32px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+}
+
+.cert-header-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.cert-header-info h1 {
+  font-size: 2.2rem;
+  font-weight: 800;
+  background: var(--accent-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 6px;
+}
+
+.cert-header-info p {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+
+.cert-upload-btn {
+  background: var(--accent-gradient);
+  color: #ffffff;
+  padding: 10px 22px;
+  border-radius: var(--radius-sm);
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(6, 182, 212, 0.35);
+  transition: all 0.2s;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.cert-upload-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(6, 182, 212, 0.5);
+}
+
+/* Certificates List */
+.cert-list-title {
+  font-size: 1.25rem;
+  color: #ffffff;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.cert-item-card {
+  background: rgba(30, 41, 59, 0.45);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: var(--radius-sm);
+  padding: 20px;
+  margin-bottom: 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  transition: all 0.2s;
+}
+
+.cert-item-card:hover {
+  border-color: rgba(6, 182, 212, 0.3);
+  transform: translateY(-2px);
+}
+
+.cert-item-info {
+  flex: 1;
+  min-width: 250px;
+}
+
+.cert-item-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0 0 6px 0;
+}
+
+.cert-item-desc {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  margin-bottom: 10px;
+}
+
+.cert-meta-row {
+  display: flex;
+  gap: 20px;
+  font-size: 0.8rem;
+  color: #94a3b8;
+  flex-wrap: wrap;
+}
+
+.cert-actions-group {
+  display: flex;
+  gap: 10px;
+}
+
+.btn-cert-view {
+  padding: 8px 16px;
+  background: rgba(6, 182, 212, 0.15);
+  color: #38bdf8;
+  border: 1px solid rgba(6, 182, 212, 0.35);
+  border-radius: var(--radius-sm);
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.btn-cert-view:hover {
+  background: #06b6d4;
+  color: #ffffff;
+}
+
+.btn-cert-delete {
+  padding: 8px 14px;
+  background: rgba(239, 68, 68, 0.12);
+  color: #f87171;
+  border: 1px solid rgba(239, 68, 68, 0.25);
+  border-radius: var(--radius-sm);
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-cert-delete:hover {
+  background: #ef4444;
+  color: #ffffff;
+}
+
+.cert-empty-box {
+  text-align: center;
+  padding: 48px 20px;
+  color: var(--text-muted);
+}
+
+.cert-empty-box .empty-icon {
+  font-size: 3rem;
+  margin-bottom: 12px;
+}
+
+.cert-empty-box h3 {
+  font-size: 1.2rem;
+  color: #e2e8f0;
+  margin-bottom: 6px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .certificates-page-wrapper {
+    padding: 100px 16px 40px;
+  }
+
+  .cert-header-card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .cert-item-card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .cert-actions-group {
+    width: 100%;
+  }
+
+  .btn-cert-view,
+  .btn-cert-delete {
+    flex: 1;
+    justify-content: center;
+  }
+}
+

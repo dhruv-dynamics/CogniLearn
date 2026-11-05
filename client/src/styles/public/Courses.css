@@ -1,0 +1,96 @@
+.instructor-courses-page {
+  padding: 30px;
+}
+
+.page-title {
+  margin-bottom: 20px;
+  font-size: 26px;
+  font-weight: 600;
+}
+
+.page-message {
+  text-align: center;
+  margin-top: 40px;
+  color: #777;
+}
+
+.courses-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.course-card {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.course-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.12);
+}
+
+.course-thumbnail img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+}
+
+.thumbnail-placeholder {
+  height: 160px;
+  background: linear-gradient(135deg, #ececec, #dcdcdc);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #888;
+  font-weight: 500;
+}
+
+.course-info {
+  padding: 15px;
+}
+
+.course-info h3 {
+  margin-bottom: 6px;
+}
+
+.course-meta {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 8px;
+}
+
+.status {
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.status.published {
+  color: #1a7f37;
+}
+
+.status.draft {
+  color: #b26a00;
+}
+
+.manage-btn {
+  width: 100%;
+  padding: 8px;
+  border: none;
+  border-radius: 6px;
+  background: #2563eb;
+  color: white;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.manage-btn:hover {
+  background: #1e4fd1;
+}

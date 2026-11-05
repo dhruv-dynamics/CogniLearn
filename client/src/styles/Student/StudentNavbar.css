@@ -1,0 +1,528 @@
+/* ================= NAVBAR BASE ================= */
+.student-navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 18px 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+  box-sizing: border-box;
+
+  background: var(--bg-nav);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--border-light);
+
+  transition: var(--transition-smooth);
+}
+
+/* Navbar when scrolled */
+.navbar-scrolled {
+  padding: 12px 60px;
+  background: var(--bg-deep); /* Almost solid when scrolling */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  border-bottom: 1px solid rgba(6, 182, 212, 0.2);
+}
+
+/* ================= LOGO ================= */
+.logo {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: white;
+  text-decoration: none;
+  letter-spacing: -0.5px;
+  transition: transform 0.3s ease;
+}
+
+.logo:hover {
+  transform: scale(1.02);
+}
+
+.logo span {
+  background: var(--accent-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0 0 5px var(--accent-glow));
+}
+
+/* ================= NAV LINKS ================= */
+.student-navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 35px;
+}
+
+.student-nav-link {
+  color: var(--text-muted);
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 500;
+  position: relative;
+  transition: var(--transition-smooth);
+}
+
+.student-nav-link:hover {
+  color: var(--accent-primary);
+}
+
+/* --- ACTIVE STATE --- */
+.student-nav-link.active {
+  color: var(--text-main);
+}
+
+.student-nav-link.active::after {
+  content: "";
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 20px;
+  height: 3px;
+  background: var(--accent-gradient);
+  border-radius: 10px;
+  box-shadow: 0 0 10px var(--accent-glow);
+}
+
+/* --- MENTOR AI SPECIAL GLOW --- */
+.mentor-ai-link {
+  background: var(--ai-gradient) !important;
+  padding: 8px 18px !important;
+  border-radius: var(--radius-sm) !important;
+  color: white !important;
+  font-weight: 600 !important;
+  box-shadow: 0 4px 15px var(--ai-glow) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  transition: var(--transition-smooth) !important;
+}
+
+.mentor-ai-link:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(168, 85, 247, 0.6) !important;
+}
+
+/* --- PROFILE AVATAR --- */
+.avatar-circle {
+  width: 42px;
+  height: 42px;
+  border-radius: var(--radius-sm);
+  background: var(--accent-gradient);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  cursor: pointer;
+  transition: var(--transition-smooth);
+  border: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+.avatar-circle:hover {
+  border-color: rgba(255, 255, 255, 0.5);
+  box-shadow: 0 0 20px var(--accent-glow);
+}
+
+/* ================= DROPDOWN ================= */
+.profile-dropdown {
+  position: absolute;
+  top: 60px;
+  right: 0;
+  width: 260px;
+  border-radius: var(--radius-md);
+  padding: 20px;
+  background: var(--bg-nav);
+  backdrop-filter: blur(25px);
+  border: 1px solid var(--border-light);
+  box-shadow: var(--shadow-soft);
+}
+
+.dropdown-header {
+  padding-bottom: 15px;
+  margin-bottom: 15px;
+  border-bottom: 1px solid var(--border-light);
+}
+
+.user-name {
+  font-weight: 700;
+  font-size: 1rem;
+  margin-bottom: 4px;
+}
+
+.user-email {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+/* Dropdown Links */
+.dropdown-menu-items a {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+  border-radius: var(--radius-sm);
+  color: var(--text-muted);
+  font-weight: 500;
+  transition: var(--transition-smooth);
+}
+
+.dropdown-menu-items a:hover {
+  background: rgba(6, 182, 212, 0.1);
+  color: white;
+  transform: translateX(5px);
+}
+
+.dropdown-logout-btn {
+  margin-top: 10px;
+  width: 100%;
+  padding: 12px;
+  border-radius: var(--radius-sm);
+  background: rgba(239, 68, 68, 0.1);
+  color: #f87171;
+  font-weight: 600;
+  transition: var(--transition-smooth);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropdown-logout-btn:hover {
+  background: #ef4444;
+  color: white;
+}
+
+/* Dropdown Buttons */
+.dropdown-item-btn {
+  width: 100%;
+  padding: 12px;
+  border-radius: var(--radius-sm);
+  background: transparent;
+  color: var(--text-muted);
+  font-weight: 500;
+  transition: var(--transition-smooth);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+}
+
+.dropdown-item-btn:hover {
+  background: rgba(6, 182, 212, 0.1);
+  color: white;
+  transform: translateX(5px);
+}
+
+.profile-dropdown a {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+  border-radius: var(--radius-sm);
+  color: var(--text-muted);
+  font-weight: 500;
+  transition: var(--transition-smooth);
+  text-decoration: none;
+}
+
+.profile-dropdown a:hover {
+  background: rgba(6, 182, 212, 0.1);
+  color: white;
+  transform: translateX(5px);
+}
+
+/* Modal Styles */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+}
+
+.modal-content {
+  background: var(--bg-nav);
+  backdrop-filter: blur(20px);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-md);
+  padding: 30px;
+  width: 90%;
+  max-width: 400px;
+  box-shadow: var(--shadow-soft);
+}
+
+.modal-content h3 {
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  color: var(--text-muted);
+  font-weight: 500;
+  margin-bottom: 8px;
+  font-size: 0.9rem;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 12px 16px;
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-sm);
+  background: rgba(255, 255, 255, 0.05);
+  color: white;
+  font-size: 1rem;
+  transition: var(--transition-smooth);
+  box-sizing: border-box;
+  outline: none;
+}
+
+.form-group input:focus {
+  border-color: var(--accent-primary);
+  background: rgba(255, 255, 255, 0.08);
+  box-shadow: 0 0 0 3px var(--accent-glow);
+}
+
+.form-group input::placeholder {
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.modal-buttons {
+  display: flex;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.modal-buttons button {
+  flex: 1;
+  padding: 12px 20px;
+  border-radius: var(--radius-sm);
+  font-weight: 600;
+  transition: var(--transition-smooth);
+  border: none;
+  cursor: pointer;
+}
+
+.modal-buttons button[type="button"] {
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--text-muted);
+}
+
+.modal-buttons button[type="button"]:hover {
+  background: rgba(255, 255, 255, 0.15);
+  color: white;
+}
+
+.modal-buttons button[type="submit"] {
+  background: var(--accent-gradient);
+  color: white;
+}
+
+.modal-buttons button[type="submit"]:hover:not(:disabled) {
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-glow);
+}
+
+.modal-buttons button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Certificates Modal Styles */
+.certificates-modal {
+  width: 90%;
+  max-width: 600px;
+  max-height: 80vh;
+  overflow-y: auto;
+}
+
+.certificates-header {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.upload-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background: var(--accent-gradient);
+  color: white;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  font-weight: 600;
+  transition: var(--transition-smooth);
+}
+
+.upload-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-glow);
+}
+
+.certificates-list {
+  margin: 20px 0;
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.no-certificates {
+  text-align: center;
+  color: var(--text-muted);
+  padding: 40px 20px;
+  font-style: italic;
+}
+
+.certificate-item {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-sm);
+  padding: 16px;
+  margin-bottom: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+  transition: var(--transition-smooth);
+}
+
+.certificate-item:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(6, 182, 212, 0.3);
+}
+
+.certificate-info {
+  flex: 1;
+}
+
+.certificate-info h4 {
+  color: white;
+  font-weight: 600;
+  margin-bottom: 4px;
+  font-size: 1rem;
+}
+
+.certificate-info p {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  margin-bottom: 8px;
+  line-height: 1.4;
+}
+
+.certificate-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.certificate-meta span {
+  color: var(--text-muted);
+  font-size: 0.8rem;
+}
+
+.certificate-actions {
+  display: flex;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.view-btn {
+  padding: 6px 12px;
+  background: rgba(6, 182, 212, 0.2);
+  color: var(--accent-primary);
+  border: 1px solid rgba(6, 182, 212, 0.3);
+  border-radius: var(--radius-sm);
+  font-size: 0.8rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: var(--transition-smooth);
+}
+
+.view-btn:hover {
+  background: rgba(6, 182, 212, 0.3);
+  color: white;
+}
+
+.delete-btn {
+  padding: 6px 12px;
+  background: rgba(239, 68, 68, 0.2);
+  color: #f87171;
+  border: 1px solid rgba(239, 68, 68, 0.3);
+  border-radius: var(--radius-sm);
+  font-size: 0.8rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: var(--transition-smooth);
+}
+
+.delete-btn:hover {
+  background: rgba(239, 68, 68, 0.3);
+  color: white;
+}
+
+.close-btn {
+  background: rgba(255, 255, 255, 0.1) !important;
+  color: var(--text-muted) !important;
+}
+
+.close-btn:hover {
+  background: rgba(255, 255, 255, 0.15) !important;
+  color: white !important;
+}
+
+@media (max-width: 850px) {
+  .student-navbar {
+    padding: 12px 20px;
+  }
+  .student-navbar-right {
+    gap: 16px;
+  }
+  .student-nav-link {
+    font-size: 0.85rem;
+  }
+  .mentor-ai-link {
+    padding: 6px 12px !important;
+    font-size: 0.82rem !important;
+  }
+}
+
+@media (max-width: 620px) {
+  .student-navbar {
+    padding: 10px 14px;
+    flex-wrap: wrap;
+  }
+  .logo {
+    font-size: 1.25rem;
+  }
+  .student-navbar-right {
+    width: 100%;
+    order: 3;
+    padding-top: 8px;
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+    justify-content: space-between;
+    gap: 8px;
+    overflow-x: auto;
+  }
+  .student-nav-link {
+    font-size: 0.8rem;
+    white-space: nowrap;
+  }
+  .mentor-ai-link {
+    padding: 4px 10px !important;
+    font-size: 0.78rem !important;
+  }
+}

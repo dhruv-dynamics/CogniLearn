@@ -1,0 +1,172 @@
+.mypath-container {
+  padding: 120px 5% 50px;
+  min-height: 100vh;
+  background: var(--bg-deep);
+}
+
+.mypath-header {
+  margin-bottom: 40px;
+}
+
+.mypath-header h1 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: white;
+}
+
+.mypath-header h1 span {
+  background: var(--accent-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.mypath-header p {
+  color: var(--text-muted);
+  margin-top: 10px;
+  font-size: 1.1rem;
+}
+
+/* Grid Layout */
+.path-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+/* Path Card Styling */
+.path-card {
+  background: var(--bg-card);
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  transition: var(--transition-smooth);
+}
+
+.path-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(6, 182, 212, 0.4);
+  box-shadow: var(--shadow-soft);
+}
+
+.path-card-image {
+  position: relative;
+  height: 180px;
+}
+
+.path-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.progress-badge {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  background: rgba(15, 23, 42, 0.8);
+  padding: 5px 12px;
+  border-radius: var(--radius-pill);
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--accent-primary);
+  border: 1px solid rgba(6, 182, 212, 0.3);
+}
+
+.path-card-content {
+  padding: 25px;
+}
+
+.path-card-content h4 {
+  font-size: 1.2rem;
+  margin-bottom: 8px;
+  color: var(--text-main);
+}
+
+.instructor-info {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-bottom: 20px;
+}
+
+/* Progress Bar */
+.path-progress-container {
+  width: 100%;
+  height: 6px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+
+.path-progress-fill {
+  height: 100%;
+  background: var(--accent-gradient);
+  box-shadow: 0 0 10px var(--accent-glow);
+}
+
+.resume-btn {
+  width: 100%;
+  padding: 12px;
+  background: rgba(6, 182, 212, 0.1);
+  border: 1px solid var(--accent-primary);
+  color: var(--accent-primary);
+  border-radius: var(--radius-sm);
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition-smooth);
+}
+
+.resume-btn:hover {
+  background: var(--accent-gradient);
+  border-color: transparent;
+  color: white;
+  box-shadow: var(--shadow-glow);
+}
+
+/* Empty State */
+.empty-path {
+  text-align: center;
+  padding: 100px 20px;
+  color: var(--text-muted);
+}
+
+.explore-btn {
+  margin-top: 20px;
+  padding: 12px 30px;
+  background: var(--accent-gradient);
+  color: white;
+  border: none;
+  border-radius: var(--radius-sm);
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: var(--shadow-glow);
+  transition: var(--transition-smooth);
+}
+
+.explore-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(6, 182, 212, 0.5);
+}
+
+.loading-screen {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--bg-deep);
+  color: var(--accent-primary);
+}
+
+@media (max-width: 768px) {
+  .mypath-container {
+    padding: 100px 16px 40px;
+  }
+  .mypath-header h1 {
+    font-size: 2rem;
+  }
+  .path-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
